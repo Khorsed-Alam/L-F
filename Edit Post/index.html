@@ -23,7 +23,8 @@
       <a href="#" class="nav-link"><i class="fas fa-chart-pie"></i> Dashboard</a>
       <a href="#" class="nav-link active"><i class="fas fa-layer-group"></i> My Listings</a>
       <a href="#" class="nav-link"><i class="fas fa-envelope"></i> Messages</a>
-      <a href="#" class="nav-link"><i class="fas fa-user-gear"></i> Account Settings</a>
+      <a href="#" class="nav-link"><i class="fas fa-heart"></i> Favorites</a>
+      <a href="#" class="nav-link"><i class="fas fa-user-gear"></i> Settings</a>
     </div>
 
     <div class="sidebar-user">
@@ -39,7 +40,7 @@
   <main class="main-content">
     <header class="page-header">
       <div class="header-info">
-        <div class="breadcrumb">Listings / Edit Mode</div>
+        <div class="breadcrumb">Listings / Edit Mode / #LF-90210</div>
         <h1>Modify Listing</h1>
       </div>
       <div class="header-actions">
@@ -51,10 +52,10 @@
     </header>
 
     <div class="workspace-grid">
-      <!-- Left Column: Core Data -->
+      <!-- Left Column: Primary Content -->
       <div class="form-column">
         <div class="card">
-          <h2 class="card-label">Item Information</h2>
+          <h2 class="card-label">Core Details</h2>
           
           <div class="input-group">
             <label class="label">Product Title</label>
@@ -62,24 +63,23 @@
           </div>
 
           <div class="input-row">
-            <!-- Category Selection -->
+            <!-- Category -->
             <div class="input-group">
               <label class="label">Category</label>
               <div class="select-wrapper">
                 <select class="form-control" id="category">
                   <option value="electronics">Electronics</option>
-                  <option value="personal" selected>Personal Items (Wallets/Keys)</option>
+                  <option value="personal" selected>Personal Items</option>
                   <option value="documents">ID & Documents</option>
                   <option value="pets">Pets</option>
-                  <option value="others">Other</option>
                 </select>
                 <i class="fas fa-chevron-down select-arrow"></i>
               </div>
             </div>
 
-            <!-- Status Selection -->
+            <!-- Status -->
             <div class="input-group">
-              <label class="label">Product Status</label>
+              <label class="label">Item Status</label>
               <div class="select-wrapper">
                 <select class="form-control status-indicator" id="status">
                   <option value="lost">🔴 Reported Lost</option>
@@ -93,7 +93,7 @@
 
           <div class="input-group">
             <label class="label">Full Description</label>
-            <textarea class="form-control" rows="6" id="desc">Found near the food court. Contains a local transit card and some cash. Please describe the brand to claim.</textarea>
+            <textarea class="form-control" rows="6" id="desc">Found near the food court. Contains a local transit card. Please describe the brand to claim.</textarea>
           </div>
         </div>
 
@@ -104,24 +104,39 @@
               <div class="photo-box">
                 <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?w=200" alt="Item">
                 <button class="photo-del"><i class="fas fa-times"></i></button>
+                <button class="favorite-overlay" onclick="toggleFavorite(this)">
+                  <i class="far fa-heart"></i>
+                </button>
               </div>
-              <div class="upload-placeholder">
+              <div class="upload-placeholder" onclick="document.getElementById('fileInput').click()">
                 <i class="fas fa-plus"></i>
                 <span>Add Photo</span>
               </div>
             </div>
+            <input type="file" id="fileInput" hidden>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Meta & Danger Zone -->
+      <!-- Right Column: Actions & Insights -->
       <div class="status-column">
+        <div class="card">
+          <h2 class="card-label">Quick Actions</h2>
+          <div class="management-actions">
+            <button class="btn btn-outline" id="fav-main-btn" onclick="toggleFavorite(this)">
+              <i class="far fa-heart"></i> <span>Add to Favorites</span>
+            </button>
+            <button class="btn btn-outline">
+              <i class="fas fa-share-nodes"></i> Share Post
+            </button>
+          </div>
+        </div>
+
         <div class="card">
           <h2 class="card-label">Insights</h2>
           <div class="stats-mini">
             <div class="stat-item"><span>Views</span><strong>412</strong></div>
             <div class="stat-item"><span>Claims</span><strong>3</strong></div>
-            <div class="stat-item"><span>Created</span><strong>Oct 24</strong></div>
           </div>
         </div>
 
@@ -136,7 +151,6 @@
     </div>
   </main>
 
-  <!-- Toast Notification -->
   <div id="toast" class="toast"></div>
 
   <script src="script.js"></script>
