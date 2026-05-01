@@ -13,10 +13,10 @@
     <nav class="sidebar">
         <div class="logo">Lost & Found</div>
         <ul class="nav-links">
-            <li class="active"><i class="fas fa-home"></i> Home</li>
-            <li><i class="fas fa-search"></i> Browse</li>
-            <li><i class="fas fa-plus-square"></i> Post</li>
-            <li><i class="fas fa-user"></i> Profile</li>
+            <li class="active" onclick="location.href='../DashBoard/index.html'"><i class="fas fa-home"></i> Home</li>
+            <li onclick="location.href='../Browse Listings/index.html'"><i class="fas fa-search"></i> Browse</li>
+            <li onclick="location.href='../Create Post/index.html'"><i class="fas fa-plus-square"></i> Post</li>
+            <li onclick="location.href='../Profile Page/index.html'"><i class="fas fa-user"></i> Profile</li>
         </ul>
     </nav>
 
@@ -24,10 +24,10 @@
         <!-- Header -->
         <header class="top-header">
             <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search For Lost and Found">
+                <i class="fas fa-search" onclick="location.href='../Search Results/index.html'"></i>
+                <input type="text" placeholder="Search For Lost and Found" onkeydown="if(event.key === 'Enter') location.href='../Search Results/index.html'">
             </div>
-            <div class="notifications">
+            <div class="notifications" onclick="location.href='../Notifications/index.html'">
                 <i class="fas fa-bell"></i>
             </div>
         </header>
@@ -36,23 +36,23 @@
         <section class="section">
             <h2>Browse by Category</h2>
             <div class="category-grid">
-                <div class="category-card">
+                <div class="category-card" onclick="location.href='../Electroincs Category/index.html'">
                     <div class="icon-box"><i class="fas fa-laptop"></i></div>
                     <p>Electronics</p>
                 </div>
-                <div class="category-card">
+                <div class="category-card" onclick="location.href='../Pets Category/index.html'">
                     <div class="icon-box"><i class="fas fa-paw"></i></div>
                     <p>Pets</p>
                 </div>
-                <div class="category-card">
+                <div class="category-card" onclick="location.href='../Bag Category/index.html'">
                     <div class="icon-box"><i class="fas fa-briefcase"></i></div>
                     <p>Bag</p>
                 </div>
-                <div class="category-card">
+                <div class="category-card" onclick="location.href='../Key Category/index.html'">
                     <div class="icon-box"><i class="fas fa-key"></i></div>
                     <p>Key</p>
                 </div>
-                <div class="category-card">
+                <div class="category-card" onclick="location.href='../Paper Category/index.html'">
                     <div class="icon-box"><i class="fas fa-file-alt"></i></div>
                     <p>Paper</p>
                 </div>
@@ -63,7 +63,7 @@
         <section class="section">
             <div class="section-header">
                 <h2>Recent Posts</h2>
-                <a href="#" class="see-all">See all</a>
+                <a href="../Browse Listings/index.html" class="see-all">See all</a>
             </div>
 
             <!-- Filter Tabs -->
@@ -75,7 +75,7 @@
 
             <div class="posts-grid" id="postsGrid">
 
-                <div class="post-card" data-status="lost">
+                <div class="post-card" data-status="lost" onclick="location.href='../Post Details/index.html'">
                     <div class="img-placeholder" style="background:#f5e6d3;">👜</div>
                     <div class="post-info">
                         <span class="status-badge status-lost">Lost</span>
@@ -86,7 +86,7 @@
                     <i class="far fa-heart heart-icon"></i>
                 </div>
 
-                <div class="post-card" data-status="found">
+                <div class="post-card" data-status="found" onclick="location.href='../Post Details/index.html'">
                     <div class="img-placeholder" style="background:#ddeeff;">📱</div>
                     <div class="post-info">
                         <span class="status-badge status-found">Found</span>
@@ -97,7 +97,7 @@
                     <i class="far fa-heart heart-icon"></i>
                 </div>
 
-                <div class="post-card" data-status="found">
+                <div class="post-card" data-status="found" onclick="location.href='../Post Details/index.html'">
                     <div class="img-placeholder" style="background:#e8f5e9;">📲</div>
                     <div class="post-info">
                         <span class="status-badge status-found">Found</span>
@@ -108,7 +108,7 @@
                     <i class="far fa-heart heart-icon"></i>
                 </div>
 
-                <div class="post-card" data-status="lost">
+                <div class="post-card" data-status="lost" onclick="location.href='../Post Details/index.html'">
                     <div class="img-placeholder" style="background:#f3e5f5;">🎒</div>
                     <div class="post-info">
                         <span class="status-badge status-lost">Lost</span>
@@ -119,7 +119,7 @@
                     <i class="far fa-heart heart-icon"></i>
                 </div>
 
-                <div class="post-card" data-status="lost">
+                <div class="post-card" data-status="lost" onclick="location.href='../Post Details/index.html'">
                     <div class="img-placeholder" style="background:#fff3e0;">🐱</div>
                     <div class="post-info">
                         <span class="status-badge status-lost">Lost</span>
@@ -130,7 +130,7 @@
                     <i class="far fa-heart heart-icon"></i>
                 </div>
 
-                <div class="post-card" data-status="found">
+                <div class="post-card" data-status="found" onclick="location.href='../Post Details/index.html'">
                     <div class="img-placeholder" style="background:#e8f5e9;">🔑</div>
                     <div class="post-info">
                         <span class="status-badge status-found">Found</span>
@@ -141,7 +141,7 @@
                     <i class="far fa-heart heart-icon"></i>
                 </div>
 
-                <div class="post-card" data-status="found">
+                <div class="post-card" data-status="found" onclick="location.href='../Post Details/index.html'">
                     <div class="img-placeholder" style="background:#e8f5e9;">🔑</div>
                     <div class="post-info">
                         <span class="status-badge status-found">Found</span>
@@ -152,7 +152,7 @@
                     <i class="far fa-heart heart-icon"></i>
                 </div>
 
-                <div class="post-card" data-status="lost">
+                <div class="post-card" data-status="lost" onclick="location.href='../Post Details/index.html'">
                     <div class="img-placeholder" style="background:#fff3e0;">🐾</div>
                     <div class="post-info">
                         <span class="status-badge status-lost">Lost</span>
@@ -178,7 +178,8 @@
         }
 
         document.querySelectorAll('.heart-icon').forEach(icon => {
-            icon.addEventListener('click', () => {
+            icon.addEventListener('click', (event) => {
+                event.stopPropagation();
                 icon.classList.toggle('far');
                 icon.classList.toggle('fas');
                 icon.style.color = icon.classList.contains('fas') ? '#ff5c5c' : '#ccc';

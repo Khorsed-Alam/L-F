@@ -15,18 +15,18 @@
     <!-- Professional Top Navigation -->
     <header class="top-nav">
         <div class="nav-container">
-            <a href="index.html" class="brand">
+            <a href="../index.html" class="brand">
                 <div class="logo-icon"><i class="fas fa-search-location"></i></div>
                 <span>Lost<b>Found</b></span>
             </a>
             <nav class="center-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="#">Browse All</a>
-                <a href="#">Map View</a>
-                <a href="#">Success Stories</a>
+                <a href="../DashBoard/index.html" class="active">Home</a>
+                <a href="../Browse Listings/index.html">Browse All</a>
+                <a href="../Map View/index.html">Map View</a>
+                <a href="../Notifications/index.html">Notifications</a>
             </nav>
             <div class="header-actions">
-                <button class="post-btn-header"><i class="fas fa-plus"></i> Post Listing</button>
+                <button class="post-btn-header" onclick="location.href='../Create Post/index.html'"><i class="fas fa-plus"></i> Post Listing</button>
             </div>
         </div>
     </header>
@@ -86,11 +86,11 @@
             <div class="detail-right">
                 <div class="card sticky-card">
                     <h2 class="section-title">Take Action</h2>
-                    <button class="action-btn btn-primary" onclick="openModal('contact')">
-                        <i class="fas fa-phone-alt"></i> Reveal Contact Info
+                    <button class="action-btn btn-primary" onclick="location.href='../Chat/index.html'">
+                        <i class="fas fa-comments"></i> Chat
                     </button>
-                    <button class="action-btn btn-secondary" onclick="openModal('gd')">
-                        <i class="fas fa-file-contract"></i> File Online GD
+                    <button class="action-btn btn-secondary" onclick="location.href='../Claim Item/index.html'">
+                        <i class="fas fa-hand-holding-heart"></i> Claim Item
                     </button>
                     <button class="action-btn btn-fav" id="favBtnSide" onclick="toggleFav()">
                         <i class="far fa-heart"></i> Add to Favorites
