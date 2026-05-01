@@ -69,8 +69,8 @@
             <!-- Filter Tabs -->
             <div class="filter-tabs">
                 <button class="filter-tab" onclick="filterPosts('all', this)">All</button>
-                <button class="filter-tab active" onclick="filterPosts('lost', this)">Lost</button>
-                <button class="filter-tab" onclick="filterPosts('found', this)">Found</button>
+                <button class="filter-tab" onclick="filterPosts('lost', this)">Lost</button>
+                <button class="filter-tab active" onclick="filterPosts('found', this)">Found</button>
             </div>
 
             <div class="posts-grid" id="postsGrid">
@@ -178,7 +178,7 @@
         }
 
         // Apply lost filter on page load
-        document.getElementById('postsGrid').classList.add('filter-lost');
+        document.getElementById('postsGrid').classList.add('filter-found');
 
         document.querySelectorAll('.heart-icon').forEach(icon => {
             icon.addEventListener('click', () => {
