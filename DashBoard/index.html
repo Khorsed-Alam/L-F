@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lost & Found Desktop</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Sidebar Navigation for Desktop -->
+    <!-- Sidebar -->
     <nav class="sidebar">
         <div class="logo">Lost & Found</div>
         <ul class="nav-links">
@@ -35,7 +34,7 @@
 
         <!-- Categories Section -->
         <section class="section">
-            <h2>Browses by Category</h2>
+            <h2>Browse by Category</h2>
             <div class="category-grid">
                 <div class="category-card">
                     <div class="icon-box"><i class="fas fa-laptop"></i></div>
@@ -63,33 +62,129 @@
         <!-- Recent Posts Section -->
         <section class="section">
             <div class="section-header">
-                <h2>Recent Post</h2>
+                <h2>Recent Posts</h2>
                 <a href="#" class="see-all">See all</a>
             </div>
-            <div class="posts-grid">
-                <!-- Post 1 -->
-                <div class="post-card">
-                    <img src="https://via.placeholder.com/150" alt="Found Keys">
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" onclick="filterPosts('all', this)">All</button>
+                <button class="filter-tab" onclick="filterPosts('lost', this)">Lost</button>
+                <button class="filter-tab" onclick="filterPosts('found', this)">Found</button>
+            </div>
+
+            <div class="posts-grid" id="postsGrid">
+
+                <div class="post-card" data-status="lost">
+                    <div class="img-placeholder" style="background:#f5e6d3;">👜</div>
                     <div class="post-info">
-                        <h3>a "Found key" notice/poster</h3>
-                        <p class="category-label">Category: Key</p>
-                        <span class="time"><i class="far fa-clock"></i> 2 hour ago</span>
+                        <span class="status-badge status-lost">Lost</span>
+                        <h3>Lost Wallet</h3>
+                        <p class="category-label"><i class="fas fa-tag"></i> Category: Bag</p>
+                        <span class="time"><i class="far fa-clock"></i> 2 hours ago</span>
                     </div>
                     <i class="far fa-heart heart-icon"></i>
                 </div>
-                <!-- Post 2 -->
-                <div class="post-card">
-                    <img src="https://via.placeholder.com/150" alt="Missing Cat">
+
+                <div class="post-card" data-status="found">
+                    <div class="img-placeholder" style="background:#ddeeff;">📱</div>
                     <div class="post-info">
-                        <h3>Our beloved cat is missing!</h3>
-                        <p class="category-label">Category: Pets</p>
+                        <span class="status-badge status-found">Found</span>
+                        <h3>Found iPhone 13</h3>
+                        <p class="category-label"><i class="fas fa-tag"></i> Category: Electronics</p>
+                        <span class="time"><i class="far fa-clock"></i> 3 hours ago</span>
+                    </div>
+                    <i class="far fa-heart heart-icon"></i>
+                </div>
+
+                <div class="post-card" data-status="found">
+                    <div class="img-placeholder" style="background:#e8f5e9;">📲</div>
+                    <div class="post-info">
+                        <span class="status-badge status-found">Found</span>
+                        <h3>Found Pixel 8 Pro</h3>
+                        <p class="category-label"><i class="fas fa-tag"></i> Category: Electronics</p>
                         <span class="time"><i class="far fa-clock"></i> 1 hour ago</span>
                     </div>
                     <i class="far fa-heart heart-icon"></i>
                 </div>
+
+                <div class="post-card" data-status="lost">
+                    <div class="img-placeholder" style="background:#f3e5f5;">🎒</div>
+                    <div class="post-info">
+                        <span class="status-badge status-lost">Lost</span>
+                        <h3>Lost Side Bag</h3>
+                        <p class="category-label"><i class="fas fa-tag"></i> Category: Bag</p>
+                        <span class="time"><i class="far fa-clock"></i> 4 hours ago</span>
+                    </div>
+                    <i class="far fa-heart heart-icon"></i>
+                </div>
+
+                <div class="post-card" data-status="lost">
+                    <div class="img-placeholder" style="background:#fff3e0;">🐱</div>
+                    <div class="post-info">
+                        <span class="status-badge status-lost">Lost</span>
+                        <h3>Lost Cat</h3>
+                        <p class="category-label"><i class="fas fa-tag"></i> Category: Pets</p>
+                        <span class="time"><i class="far fa-clock"></i> 5 hours ago</span>
+                    </div>
+                    <i class="far fa-heart heart-icon"></i>
+                </div>
+
+                <div class="post-card" data-status="found">
+                    <div class="img-placeholder" style="background:#e8f5e9;">🔑</div>
+                    <div class="post-info">
+                        <span class="status-badge status-found">Found</span>
+                        <h3>Found Side Bag</h3>
+                        <p class="category-label"><i class="fas fa-tag"></i> Category: Key</p>
+                        <span class="time"><i class="far fa-clock"></i> 30 mins ago</span>
+                    </div>
+                    <i class="far fa-heart heart-icon"></i>
+                </div>
+
+                <div class="post-card" data-status="found">
+                    <div class="img-placeholder" style="background:#e8f5e9;">🔑</div>
+                    <div class="post-info">
+                        <span class="status-badge status-found">Found</span>
+                        <h3>A "Found Key" notice/poster</h3>
+                        <p class="category-label"><i class="fas fa-tag"></i> Category: Key</p>
+                        <span class="time"><i class="far fa-clock"></i> 2 hours ago</span>
+                    </div>
+                    <i class="far fa-heart heart-icon"></i>
+                </div>
+
+                <div class="post-card" data-status="lost">
+                    <div class="img-placeholder" style="background:#fff3e0;">🐾</div>
+                    <div class="post-info">
+                        <span class="status-badge status-lost">Lost</span>
+                        <h3>Our beloved cat is missing!</h3>
+                        <p class="category-label"><i class="fas fa-tag"></i> Category: Pets</p>
+                        <span class="time"><i class="far fa-clock"></i> 1 hour ago</span>
+                    </div>
+                    <i class="far fa-heart heart-icon"></i>
+                </div>
+
             </div>
         </section>
     </main>
+
+    <script>
+        function filterPosts(type, btn) {
+            document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            const grid = document.getElementById('postsGrid');
+            grid.classList.remove('filter-lost', 'filter-found');
+            if (type === 'lost') grid.classList.add('filter-lost');
+            if (type === 'found') grid.classList.add('filter-found');
+        }
+
+        document.querySelectorAll('.heart-icon').forEach(icon => {
+            icon.addEventListener('click', () => {
+                icon.classList.toggle('far');
+                icon.classList.toggle('fas');
+                icon.style.color = icon.classList.contains('fas') ? '#ff5c5c' : '#ccc';
+            });
+        });
+    </script>
 
 </body>
 </html>
