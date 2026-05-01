@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found Desktop</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation for Desktop -->
+    <nav class="sidebar">
+        <div class="logo">Lost & Found</div>
+        <ul class="nav-links">
+            <li class="active"><i class="fas fa-home"></i> Home</li>
+            <li><i class="fas fa-search"></i> Browse</li>
+            <li><i class="fas fa-plus-square"></i> Post</li>
+            <li><i class="fas fa-user"></i> Profile</li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <!-- Header -->
+        <header class="top-header">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search For Lost and Found">
+            </div>
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+            </div>
+        </header>
+
+        <!-- Categories Section -->
+        <section class="section">
+            <h2>Browses by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="icon-box"><i class="fas fa-laptop"></i></div>
+                    <p>Electronics</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box"><i class="fas fa-paw"></i></div>
+                    <p>Pets</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                    <p>Bag</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box"><i class="fas fa-key"></i></div>
+                    <p>Key</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon-box"><i class="fas fa-file-alt"></i></div>
+                    <p>Paper</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Posts Section -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Recent Post</h2>
+                <a href="#" class="see-all">See all</a>
+            </div>
+            <div class="posts-grid">
+                <!-- Post 1 -->
+                <div class="post-card">
+                    <img src="https://via.placeholder.com/150" alt="Found Keys">
+                    <div class="post-info">
+                        <h3>a "Found key" notice/poster</h3>
+                        <p class="category-label">Category: Key</p>
+                        <span class="time"><i class="far fa-clock"></i> 2 hour ago</span>
+                    </div>
+                    <i class="far fa-heart heart-icon"></i>
+                </div>
+                <!-- Post 2 -->
+                <div class="post-card">
+                    <img src="https://via.placeholder.com/150" alt="Missing Cat">
+                    <div class="post-info">
+                        <h3>Our beloved cat is missing!</h3>
+                        <p class="category-label">Category: Pets</p>
+                        <span class="time"><i class="far fa-clock"></i> 1 hour ago</span>
+                    </div>
+                    <i class="far fa-heart heart-icon"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
